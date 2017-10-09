@@ -5,7 +5,7 @@ import random
 
 #-メイン文-#
 if __name__ == "__main__":
-    ##モデルの定義を行う
+    ##モデルの定義
     #入力層
     #任意のユニット数の入力層から3層への結合
     _x = tf.placeholder(tf.float32,[None,3])
@@ -21,7 +21,7 @@ if __name__ == "__main__":
     b_hist = tf.summary.histogram("biases", b1)
     y_hist = tf.summary.histogram("y", y)
 
-    ##誤差関数及び学習器の設定を行う
+    ##誤差関数及び学習器の設定
     #正解の値を格納するplaceholderを作成
     _y = tf.placeholder(tf.float32,[None,1])
     #誤差関数の設定
