@@ -17,7 +17,7 @@ if __name__ == "__main__":
     y = tf.matmul(_x, W1) + b1
 
     ##誤差関数及び学習器の設定
-    #正解の値を格納するplaceholderを作成
+    #正解の値を格納するplaceholderの作成
     _y = tf.placeholder(tf.float32,[None,1])
     #誤差関数の設定
     loss = tf.reduce_sum((tf.square(_y - y)))
