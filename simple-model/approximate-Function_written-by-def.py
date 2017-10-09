@@ -28,7 +28,8 @@ def FunctionModel(input_placeholder):
 
 
 #@brief:誤差の計算を行う
-#@param:
+#@param:label_placeholder   正解ラベルのプレースホルダー
+#       output  順伝播の計算結果
 #@return:loss   誤差の値
 def loss(label_placeholder,output):
     #誤差関数の設定
@@ -38,6 +39,7 @@ def loss(label_placeholder,output):
 
 
 #@brief:学習器の設定を行う
+#@param:loss    誤差の値
 #@return:train_step 学習器の設定
 def training(loss):
     return tf.train.AdamOptimizer().minimize(loss)
