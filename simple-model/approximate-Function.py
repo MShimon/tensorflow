@@ -5,7 +5,7 @@ import random
 
 #-メイン文-#
 if __name__ == "__main__":
-    ##モデルの定義を行う
+    ##モデルの定義
     #入力層
     #任意のユニット数の入力層から3層への結合
     _x = tf.placeholder(tf.float32,[None,3])
